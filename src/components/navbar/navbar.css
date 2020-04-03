@@ -1,0 +1,13 @@
+.navbar_container {
+    background-color: coral;
+}
+.nav_btns {
+    background-color: transparent;
+    color: #fff !important;
+    border: none;
+}
+
+.nav_btns:hover {
+    background-color: #fff;
+    color: coral !important;
+}

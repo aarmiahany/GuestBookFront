@@ -1,0 +1,5 @@
+{
+    "name": "Create new message",
+    "private": true,
+    "main": "./CreateNewMessage.js"
+}

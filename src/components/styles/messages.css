@@ -1,0 +1,21 @@
+.msg_list {
+    margin: 20px auto;
+    width: 70%;
+    border: 1px solid #eee !important;
+    text-align: left;
+    display: flex !important;
+}
+
+.msg_list .list_content {
+    flex-grow: 1;
+}
+
+.msg_list .list_icon {
+    flex-grow: 0.3;
+    cursor: pointer;
+    color: coral;
+}
+
+.close {
+    display: none;
+}
