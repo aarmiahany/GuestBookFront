@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Container, Card, Form} from 'react-bootstrap';
 import Formgroup from '../../components/FormContents/Formgroup';
 import swal from 'sweetalert';
+import axios from 'axios';
 
 export default function CreateNewMessage() {
    const [msgData, setMsgData] = useState({});
@@ -19,6 +20,12 @@ export default function CreateNewMessage() {
             return swal("Could not create message", "Enter All Required Data", "error");
         }
 
+        let token = JSON.parse(sessionStorage.getItem("accessToken"));
+        let tokenToSend = token.tokenID + ' ' + token.issuedDate;
+
+        axios.post("/message", { ...msgData }, { headers: { Authorization: tokenToSend }})
+        .then(res => {swal("Done!","Message Created Successfully", "success");})
+        .catch(ex => swal("Erorr", "An Error Ocurried", "error"));
     }
 
     return (

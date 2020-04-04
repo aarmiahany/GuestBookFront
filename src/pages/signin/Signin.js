@@ -1,13 +1,12 @@
 import React from 'react';
 import Formgroup from '../../components/FormContents/Formgroup';
-import { Form, Container, Card } from 'react-bootstrap';
+import { Form, Container, Card, Spinner } from 'react-bootstrap';
 import Auth from '../../HOC/AuthComponent';
-
-// import axios from 'axios';
+import { withRouter } from 'react-router-dom';
 
 import '../styles/forms.css';
 
-function Signin ({ _handleSubmit, _handleChange }) {
+function Signin ({ _handleSubmit, _handleChange , showSpinner}) {
     return(
     <Container>  
         <Card className="text-center card_container">
@@ -27,6 +26,13 @@ function Signin ({ _handleSubmit, _handleChange }) {
                         name="password"
                     /> 
                     <button  type="submit" className="btn btn_submit">
+                          { showSpinner ? <Spinner
+                            as="span"
+                            animation="border"
+                            size="sm"
+                            role="status"
+                            aria-hidden="true"
+                           />: null}
                         Login
                     </button>
                 </Form>
@@ -36,4 +42,4 @@ function Signin ({ _handleSubmit, _handleChange }) {
     )
 }
 
-export default Auth(Signin, 'signin');
+export default withRouter(Auth(Signin, 'signin'));
