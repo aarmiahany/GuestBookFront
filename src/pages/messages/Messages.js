@@ -29,7 +29,6 @@ export default function Messages () {
             },
           })
           .then(v => {
-            if (!v) throw null;
                if(v){
                  return axios({
                     url: "/message",
@@ -46,7 +45,6 @@ export default function Messages () {
     const _deleteMsg = id => {
         swal("Warning!", "Are You Sure To Delete This Message","warning")
         .then(v => {
-            if(!v) { throw null};
             if(v){
                  return axios({
                     url: "/message",

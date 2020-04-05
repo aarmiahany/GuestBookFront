@@ -22,7 +22,6 @@ export default function MessagesList ({ messages = [] , _deleteMsg, _editMsg}) {
             },
           })
           .then(v => {
-            if (!v) throw null;
                if(v){
                  return axios({
                     url: "/message/reply",

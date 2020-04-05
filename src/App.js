@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Navbar from './components/navbar'; 
 import Layout from './layout';
+
 import axios from 'axios';
 
 // set axios defaults
@@ -14,7 +15,6 @@ function App() {
       <Navbar />
       { /* layout Component */}
       <Layout />
-      { /* Footer Component */}
     </div>
   );
 }

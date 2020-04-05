@@ -1,4 +1,18 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# GuestBook
+
+
+
+# Introduction
+### GuestBook is an App that the Users can:
+
+* Register
+* login to the App
+* view messages
+* create new messages
+* update the existing messages
+* delete any message
+* also users can reply to messages
+
 
 ## Available Scripts
 
@@ -66,3 +80,31 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+## Files Explanation:
+
+Components --> contains all resuable components which are used in another modules
+
+styles --> global styles for the app
+
+HOC --> A concept in React .. HOC is a fucntion that takes Component as a argument and return enhanced version of it.
+
+layout --> navigating between different components using router 
+
+pages --> the diffrent views for the app
+
+routes --> for collecting all component and mapping through them generating dynamic routes
+
+App.js --> the conatiner for the app 
+
+## Comments: 
+
+i used axios for creating http calls .. one of most popular libraries for http requests
+
+react-router-dom --> for creating router and navigation between screens
+
+react-bootstrap --> The most popular front-end framework Rebuilt for React.
+
+sweet-alert --> Act as pop-up Model for user
+
+
